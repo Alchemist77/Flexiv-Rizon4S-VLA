@@ -10,6 +10,24 @@ https://github.com/Alchemist77/mujoco-vla-data-collection
 
 That project generates the demonstration dataset required for training this VLA model.
 
+## Download the pretrained checkpoint
+
+Download the trained checkpoint from Google Drive:
+
+```bash
+pip install gdown
+mkdir -p checkpoints
+
+gdown 1zFJzNuD5aSKLxfoVLjBcM4l74Jz_8o0M \
+  -O checkpoints/true_vla_best.pt
+```
+
+The checkpoint must be located at:
+
+```text
+checkpoints/true_vla_best.pt
+```
+
 ## Workflow
 
 1. Install the data-collection repository.
@@ -21,11 +39,20 @@ That project generates the demonstration dataset required for training this VLA 
 
 ## Installation
 
-### 1. Clone the previous data-collection project
+### 0. Clone the previous data-collection project
 
 ```bash
 git clone https://github.com/Alchemist77/mujoco-vla-data-collection.git
 cd mujoco-vla-data-collection
+
+```
+
+## 1. Download the CLIP model
+
+Download the CLIP model and place it in:
+
+```
+models/CLIP-ViT-L-14-laion2B-s32B-b82K
 ```
 
 ### 2. Create a virtual environment
